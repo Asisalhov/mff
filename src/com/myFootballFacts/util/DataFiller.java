@@ -1,9 +1,16 @@
 package com.myFootballFacts.util;
 
 import com.myFootballFacts.dto.League;
+import com.myFootballFacts.dto.Player;
+import com.myFootballFacts.dto.Team;
+import jxl.Cell;
+import jxl.CellType;
+import jxl.Sheet;
+import jxl.Workbook;
 
+import java.io.IOException;
+import java.util.HashMap;
 import java.util.HashSet;
-import java.util.Vector;
 
 /**
  * Created with IntelliJ IDEA.
@@ -14,10 +21,72 @@ import java.util.Vector;
 public class DataFiller {
     public HashSet<League> fillLeaguesData() {
         HashSet<League> leagues = new HashSet<League>();
-        ImportExcelSheet importExcelSheet=new ImportExcelSheet();
-        Vector dataHolder=importExcelSheet.importSheet("Excel_file.xlsx");
 
+        ReadExcel readExcel = new ReadExcel();
+        readExcel.setInputFile("C:\\work2\\mff\\excelSheets\\PREMIER LEAGUE SQUAD NUMBERS 1993-94 to 2011-12.xls");
+        try {
+            Workbook workbook = readExcel.read();
+            League league = parseExcel(workbook) ;
+            leagues.add(league);
+        } catch (IOException e) {
+            e.printStackTrace();  //Todo change body of catch statement use File | Settings | File Templates.
+        }
 
         return leagues;
     }
+
+    public static void main(String[] args) {
+        DataFiller df = new DataFiller();
+        HashSet<League> data = df.fillLeaguesData();
+        System.out.println("hello banana" + data.toString());
+    }
+
+
+    private League parseExcel(Workbook worksheet){
+        // Get the first sheet
+        League league = new League("PREMIER LEAGUE");
+        HashSet <Team> teams = new HashSet<Team>();
+
+        Sheet[] sheets = worksheet.getSheets();
+        Team team;
+        for (Sheet sheet : sheets) {  //sheet holds a team
+            team = new Team();
+            team.setName(sheet.getName());
+            HashMap<String, HashMap<Integer, Player>> years = new HashMap<String, HashMap<Integer, Player>>();
+            String yearTitle;
+
+            for (int j = 3; j < sheet.getColumns(); j++) {     // for every year entry
+                yearTitle=sheet.getCell(j,2).getContents();
+                HashMap players = new HashMap();
+                for (int i = 2; i < sheet.getRows(); i++) { //for each player
+                    Cell cell = sheet.getCell(j, i);
+                    CellType type = cell.getType();
+                    if (type == CellType.LABEL) {
+                        String[] playerName = cell.getContents().split(" ");
+                        Player player;
+                        if (playerName.length>1 ){
+                                player = new Player(playerName[0],playerName[1]);
+                        }else {
+                                player = new Player(cell.getContents()," ");
+                        }
+                        players.put(new Integer(i-2),player);
+
+                    }
+
+                    if (type == CellType.NUMBER) {
+                        j++;
+                    }
+
+                }
+                years.put(yearTitle, players);
+            }
+            team.setYears(years);
+            teams.add(team);
+
+        }
+
+        league .setTeams(teams);
+        return league;
+    }
+
 }

@@ -1,5 +1,8 @@
 package com.myFootballFacts;
 
+import com.myFootballFacts.dto.League;
+import com.myFootballFacts.dto.Team;
+
 import javax.servlet.ServletContextAttributeEvent;
 import javax.servlet.ServletContextAttributeListener;
 import javax.servlet.ServletException;
@@ -28,10 +31,17 @@ public class GetSquadNumbers extends HttpServlet implements ServletContextAttrib
 
         response.setContentType("text/html");
         PrintWriter out = response.getWriter();
-        String team = request.getParameter("Team");
-        Config config = (Config) getServletContext().getAttribute("leagues");
+        String reqTeam = request.getParameter("Team");
+        HashSet<League> leagues= (HashSet<League>) getServletContext().getAttribute("leagues");
 
-        data = get
+        for (League league : leagues){
+            HashSet<Team> teams = league.getTeams();
+            for (Team team : teams){
+                if (team.getName().equalsIgnoreCase(reqTeam)){
+                   //todo :
+                }
+            }
+        }
 
 
 

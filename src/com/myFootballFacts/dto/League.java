@@ -12,6 +12,10 @@ public class League {
     String leagueName;
     HashSet <Team> teams;
 
+    public League(String leagueName) {
+        this.setLeagueName(leagueName);
+    }
+
     public String getLeagueName() {
         return leagueName;
     }

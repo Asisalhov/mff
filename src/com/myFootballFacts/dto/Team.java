@@ -2,7 +2,6 @@ package com.myFootballFacts.dto;
 
 
 import java.util.HashMap;
-import java.util.HashSet;
 
 /**
  * Created with IntelliJ IDEA.
@@ -14,8 +13,15 @@ public class Team {
 
     String league ;
     String name;
-    HashSet<HashMap<Integer,Player>> year;
+    HashMap years;
 
+    public HashMap getYears() {
+        return years;
+    }
+
+    public void setYears(HashMap years) {
+        this.years = years;
+    }
 
     public String getLeague() {
         return league;
@@ -42,7 +48,7 @@ public class Team {
 
         return !(league != null ? !league.equals(team.league) : team.league != null)
                 && !(name != null ? !name.equals(team.name) : team.name != null)
-                && !(year != null ? !year.equals(team.year) : team.year != null);
+                && !(years != null ? !years.equals(team.years) : team.years != null);
 
     }
 
@@ -50,7 +56,7 @@ public class Team {
     public int hashCode() {
         int result = league != null ? league.hashCode() : 0;
         result = 31 * result + (name != null ? name.hashCode() : 0);
-        result = 31 * result + (year != null ? year.hashCode() : 0);
+        result = 31 * result + (years != null ? years.hashCode() : 0);
         return result;
     }
 }
