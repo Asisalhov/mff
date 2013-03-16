@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3f45a807-851c-4256-91f4-e356848283ef" name="Default" comment="" />
+    <list default="true" id="3f45a807-851c-4256-91f4-e356848283ef" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/myFootballFacts/util/DataFiller.java" afterPath="$PROJECT_DIR$/src/com/myFootballFacts/util/DataFiller.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/myFootballFacts/util/ImportExcelSheet.java" afterPath="$PROJECT_DIR$/src/com/myFootballFacts/util/ImportExcelSheet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/mff_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/mff_war_exploded.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="mff.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="$PROJECT_DIR$/../intiguaupload/.idea/workspace.xml" changelist="3f45a807-851c-4256-91f4-e356848283ef" time="1363425903186" ignored="false" />
+    <file path="$PROJECT_DIR$/../intiguaupload/.idea/workspace.xml" changelist="3f45a807-851c-4256-91f4-e356848283ef" time="1363426587251" ignored="false" />
     <file path="/GetSquadNumbers.java" changelist="3f45a807-851c-4256-91f4-e356848283ef" time="1363423819783" ignored="false" />
     <file path="/team.java" changelist="3f45a807-851c-4256-91f4-e356848283ef" time="1363423243085" ignored="false" />
     <file path="/fragment.java" changelist="3f45a807-851c-4256-91f4-e356848283ef" time="1363425385585" ignored="false" />
@@ -12,7 +19,9 @@
     <file path="/web.xml" changelist="3f45a807-851c-4256-91f4-e356848283ef" time="1363423780399" ignored="false" />
     <file path="/Config.java" changelist="3f45a807-851c-4256-91f4-e356848283ef" time="1363425368676" ignored="false" />
     <file path="/League.java" changelist="3f45a807-851c-4256-91f4-e356848283ef" time="1363425008626" ignored="false" />
-    <file path="/DataFiller.java" changelist="3f45a807-851c-4256-91f4-e356848283ef" time="1363425450502" ignored="false" />
+    <file path="/DataFiller.java" changelist="3f45a807-851c-4256-91f4-e356848283ef" time="1363427119404" ignored="false" />
+    <file path="/Dummy.txt" changelist="3f45a807-851c-4256-91f4-e356848283ef" time="1363426603929" ignored="false" />
+    <file path="/ImportExcelSheet.java" changelist="3f45a807-851c-4256-91f4-e356848283ef" time="1363427041116" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,22 +100,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DataFiller.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="DataFiller.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/myFootballFacts/util/DataFiller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="8" selection-start="317" selection-end="317" vertical-scroll-proportion="0.0">
+            <state line="18" column="8" selection-start="483" selection-end="483" vertical-scroll-proportion="0.533101">
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#305#313#0" expanded="true" />
+                <element signature="e#330#338#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ImportExcelSheet.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="ImportExcelSheet.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/myFootballFacts/util/ImportExcelSheet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="45" selection-start="1425" selection-end="1425" vertical-scroll-proportion="0.9409722">
+            <state line="17" column="17" selection-start="454" selection-end="454" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -177,6 +186,14 @@
       <setting name="OPEN_NEW_TAB" value="false" />
     </FindUsagesManager>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitLogSettings">
+    <option name="myDateState">
+      <MyDateState />
+    </option>
+  </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
@@ -189,8 +206,8 @@
         <option value="$PROJECT_DIR$/src/com/myFootballFacts/dto/League.java" />
         <option value="$PROJECT_DIR$/src/com/myFootballFacts/GetSquadNumbers.java" />
         <option value="$PROJECT_DIR$/src/com/myFootballFacts/Config.java" />
-        <option value="$PROJECT_DIR$/src/com/myFootballFacts/util/DataFiller.java" />
         <option value="$PROJECT_DIR$/src/com/myFootballFacts/util/ImportExcelSheet.java" />
+        <option value="$PROJECT_DIR$/src/com/myFootballFacts/util/DataFiller.java" />
       </list>
     </option>
   </component>
@@ -200,7 +217,7 @@
     <option name="width" value="1378" />
     <option name="height" value="780" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
     <OptionsSetting value="true" id="Checkout" />
@@ -363,13 +380,16 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="project.structure.last.edited" value="Project" />
     <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="project.structure.proportion" value="0.0" />
     <property name="OverrideImplement.combined" value="false" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="options.lastSelected" value="project.propVCSSupport.VCSs.Git" />
     <property name="recentsLimit" value="5" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/web/WEB-INF/lib" />
+    <property name="project.structure.side.proportion" value="0.0" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="findjar.last.used.dir" value="$PROJECT_DIR$/web/WEB-INF/lib" />
@@ -503,6 +523,24 @@
     </configuration>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false">
+    <option name="USER" value="" />
+    <option name="PASSWORD" value="" />
+    <option name="mySSHConnectionTimeout" value="30000" />
+    <option name="mySSHReadTimeout" value="30000" />
+    <option name="LAST_MERGED_REVISION" />
+    <option name="MERGE_DRY_RUN" value="false" />
+    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
+    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
+    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
+    <option name="DETECT_NESTED_COPIES" value="true" />
+    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
+    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
+    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
+    <option name="FORCE_UPDATE" value="false" />
+    <option name="IGNORE_EXTERNALS" value="false" />
+    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="3f45a807-851c-4256-91f4-e356848283ef" name="Default" comment="" />
@@ -596,6 +634,10 @@
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
   <component name="editorHistoryManager">
     <entry file="javaeeDummy://JavaeeElement:/c82e798d/GetSquadNumbers/mff/web/Web/Servlet">
       <provider selected="true" editor-type-id="com.intellij.javaee.module.view.web.viewlets.ServletEditorProvider">
@@ -657,16 +699,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/myFootballFacts/util/DataFiller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="8" selection-start="317" selection-end="317" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#305#313#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/myFootballFacts/GetSquadNumbers.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="31" column="74" selection-start="1038" selection-end="1045" vertical-scroll-proportion="0.0">
@@ -676,13 +708,112 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/myFootballFacts/util/ImportExcelSheet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="45" selection-start="1425" selection-end="1425" vertical-scroll-proportion="0.9409722">
+        <state line="17" column="17" selection-start="454" selection-end="454" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/myFootballFacts/util/DataFiller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="8" selection-start="483" selection-end="483" vertical-scroll-proportion="0.533101">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#330#338#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <last-edited>mff:war exploded</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Google App Engine</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.6</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>mff</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.6</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>AppEngine API</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>
 

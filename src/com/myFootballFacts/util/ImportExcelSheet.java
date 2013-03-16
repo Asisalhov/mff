@@ -17,7 +17,7 @@ import java.util.Vector;
  */
 public class ImportExcelSheet {
 
-    private Vector importExcelSheet(String fileName)
+    public Vector importSheet(String fileName)
     {
         Vector cellVectorHolder = new Vector();
         try
