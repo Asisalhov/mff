@@ -1,4 +1,4 @@
-package com.myFootballFacts; /**
+package com.myFootballFacts.servlets; /**
  * Created with IntelliJ IDEA.
  * User: Asi
  * Date: 16/03/13
@@ -14,6 +14,7 @@ import javax.servlet.http.HttpSessionAttributeListener;
 import javax.servlet.http.HttpSessionEvent;
 import javax.servlet.http.HttpSessionListener;
 import javax.servlet.http.HttpSessionBindingEvent;
+import java.io.IOException;
 import java.util.HashSet;
 
 public class Config implements ServletContextListener,
@@ -35,7 +36,11 @@ public class Config implements ServletContextListener,
          You can initialize servlet context related data here.
       */
         DataFiller dataFiller = new DataFiller();
-        leagues = dataFiller.fillLeaguesData();
+        try {
+            leagues = dataFiller.fillLeaguesData(sce.getServletContext());
+        } catch (IOException e) {
+            throw new RuntimeException("Error in servlet context initialization, e=" ,e);
+        }
         sce.getServletContext().setAttribute("leagues", leagues);
 
     }

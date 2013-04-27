@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eclipse-userlibraries>
+  <library name="AppEngine API">
+    <archive path="C:/work/appengine-java-sdk-1.7.2.1/lib/user/appengine-api-1.0-sdk-1.7.2.1.jar" />
+    <archive path="C:/work/appengine-java-sdk-1.7.2.1/lib/user/appengine-api-labs-1.7.2.1.jar" />
+    <archive path="C:/work/appengine-java-sdk-1.7.2.1/lib/user/appengine-jsr107cache-1.7.2.1.jar" />
+    <archive path="C:/work/appengine-java-sdk-1.7.2.1/lib/user/jsr107cache-1.1.jar" />
+  </library>
+  <library name="Java EE 6-Java EE 6">
+    <archive path="C:/work2/mff/lib/javax.annotation.jar" />
+    <archive path="C:/work2/mff/lib/javax.ejb.jar" />
+    <archive path="C:/work2/mff/lib/javax.jms.jar" />
+    <archive path="C:/work2/mff/lib/javax.resource.jar" />
+    <archive path="C:/work2/mff/lib/javax.servlet.jar" />
+    <archive path="C:/work2/mff/lib/javax.servlet.jsp.jar" />
+    <archive path="C:/work2/mff/lib/javax.servlet.jsp.jstl.jar" />
+  </library>
+  <library name="AppEngine ORM">
+    <archive path="C:/work/appengine-java-sdk-1.7.2.1/lib/user/orm/datanucleus-appengine-1.0.10.final.jar" />
+    <archive path="C:/work/appengine-java-sdk-1.7.2.1/lib/user/orm/datanucleus-core-1.1.5.jar" />
+    <archive path="C:/work/appengine-java-sdk-1.7.2.1/lib/user/orm/datanucleus-jpa-1.1.5.jar" />
+    <archive path="C:/work/appengine-java-sdk-1.7.2.1/lib/user/orm/geronimo-jpa_3.0_spec-1.1.1.jar" />
+    <archive path="C:/work/appengine-java-sdk-1.7.2.1/lib/user/orm/geronimo-jta_1.1_spec-1.1.1.jar" />
+    <archive path="C:/work/appengine-java-sdk-1.7.2.1/lib/user/orm/jdo2-api-2.3-eb.jar" />
+  </library>
+</eclipse-userlibraries>
+

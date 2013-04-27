@@ -5,19 +5,19 @@
 		  http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
            version="2.5">
     <listener>
-        <listener-class>com.myFootballFacts.Config</listener-class>
+        <listener-class>com.myFootballFacts.servlets.Config</listener-class>
     </listener>
 
     <servlet>
         <servlet-name>GetSquadNumbers</servlet-name>
-        <servlet-class>com.myFootballFacts.GetSquadNumbers</servlet-class>
+        <servlet-class>com.myFootballFacts.servlets.GetSquadNumbers</servlet-class>
         <load-on-startup>1</load-on-startup>
     </servlet>
 
 
     <servlet-mapping>
         <servlet-name>GetSquadNumbers</servlet-name>
-        <url-pattern>GetSquadNumbers</url-pattern>
+        <url-pattern>/GetSquadNumbers</url-pattern>
     </servlet-mapping>
 
 

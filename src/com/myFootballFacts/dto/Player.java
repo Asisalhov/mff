@@ -49,4 +49,8 @@ public class Player {
         result = 31 * result + (lastName != null ? lastName.hashCode() : 0);
         return result;
     }
+
+    public String getFullName(){
+        return this.firstName + " " + this.lastName;
+    }
 }

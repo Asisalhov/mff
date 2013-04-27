@@ -1,6 +1,7 @@
-package com.myFootballFacts;
+package com.myFootballFacts.servlets;
 
 import com.myFootballFacts.dto.League;
+import com.myFootballFacts.dto.Player;
 import com.myFootballFacts.dto.Team;
 
 import javax.servlet.ServletContextAttributeEvent;
@@ -11,7 +12,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Arrays;
+import java.util.HashMap;
 import java.util.HashSet;
+
+import org.json.simple.*;
 
 /**
  * Created with IntelliJ IDEA.
@@ -22,30 +27,42 @@ import java.util.HashSet;
 public class GetSquadNumbers extends HttpServlet implements ServletContextAttributeListener {
 
 
-
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+        HashSet<League> leagues = (HashSet<League>) getServletContext().getAttribute("leagues");
         response.setContentType("text/html");
         PrintWriter out = response.getWriter();
         String reqTeam = request.getParameter("Team");
-        HashSet<League> leagues= (HashSet<League>) getServletContext().getAttribute("leagues");
+        if (reqTeam == null || reqTeam.equals("")) {
+            JSONArray teamListJson = new JSONArray();
+            for (League league : leagues) {
+                HashSet<Team> teams = league.getTeams();
+                for (Team team : teams) {
+                    teamListJson.add(team.getName());
+                }
+            }
+            out.write(teamListJson.toJSONString());
+            out.flush();
+            return;
+        }
 
-        for (League league : leagues){
+        // out.write("Hello\n\nWhatzzzup?");
+        for (League league : leagues) {
             HashSet<Team> teams = league.getTeams();
-            for (Team team : teams){
-                if (team.getName().equalsIgnoreCase(reqTeam)){
-                   //todo :
+            for (Team team : teams) {
+                if (team.getName().equalsIgnoreCase(reqTeam)) {
+                    out.write(team.toJsonString());
                 }
             }
         }
 
-
+        out.flush();
 
     }
+
 
     @Override
     public void attributeAdded(ServletContextAttributeEvent servletContextAttributeEvent) {

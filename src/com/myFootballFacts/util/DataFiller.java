@@ -8,7 +8,9 @@ import jxl.CellType;
 import jxl.Sheet;
 import jxl.Workbook;
 
+import javax.servlet.ServletContext;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.HashMap;
 import java.util.HashSet;
 
@@ -19,26 +21,24 @@ import java.util.HashSet;
  * Time: 11:16
  */
 public class DataFiller {
-    public HashSet<League> fillLeaguesData() {
+    public HashSet<League> fillLeaguesData( ServletContext context) throws IOException {
         HashSet<League> leagues = new HashSet<League>();
 
         ReadExcel readExcel = new ReadExcel();
-        readExcel.setInputFile("C:\\work2\\mff\\excelSheets\\PREMIER LEAGUE SQUAD NUMBERS 1993-94 to 2011-12.xls");
-        try {
+
+        readExcel.setInputFile(context.getRealPath ("/WEB-INF/excelSheets/PREMIER LEAGUE SQUAD NUMBERS 1993-94 to 2011-12.xls"));
             Workbook workbook = readExcel.read();
             League league = parseExcel(workbook) ;
             leagues.add(league);
-        } catch (IOException e) {
-            e.printStackTrace();  //Todo change body of catch statement use File | Settings | File Templates.
-        }
+
 
         return leagues;
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         DataFiller df = new DataFiller();
-        HashSet<League> data = df.fillLeaguesData();
-        System.out.println("hello banana" + data.toString());
+      //  HashSet<League> data = df.fillLeaguesData();
+     //   System.out.println("hello banana" + data.toString());
     }
 
 

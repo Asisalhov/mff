@@ -2,6 +2,9 @@ package com.myFootballFacts.dto;
 
 
 import java.util.HashMap;
+import com.google.gson.Gson;
+import org.json.simple.JSONArray;
+import org.json.simple.JSONValue;
 
 /**
  * Created with IntelliJ IDEA.
@@ -13,13 +16,13 @@ public class Team {
 
     String league ;
     String name;
-    HashMap years;
+    HashMap<String, HashMap<Integer, Player>>  years;
 
-    public HashMap getYears() {
+    public HashMap<String, HashMap<Integer, Player>>  getYears() {
         return years;
     }
 
-    public void setYears(HashMap years) {
+    public void setYears(HashMap<String, HashMap<Integer, Player>> years) {
         this.years = years;
     }
 
@@ -58,5 +61,29 @@ public class Team {
         result = 31 * result + (name != null ? name.hashCode() : 0);
         result = 31 * result + (years != null ? years.hashCode() : 0);
         return result;
+    }
+
+
+    public String toJsonString() {
+        JSONArray columns = new JSONArray();
+
+        HashMap<String, HashMap<Integer, Player>> years = this.getYears();
+
+        columns.addAll(years.keySet());
+        for (String year : years.keySet()) {
+            HashMap<Integer, Player> payersYear = years.get(year);
+            JSONArray rows = new JSONArray();
+            for (Integer number:payersYear.keySet()){
+                Player player = payersYear.get(number);
+                if (player==null) continue;
+                String name = player.getFullName();
+                rows.add(number + ":" + name);
+                //out.write("row: " + rows.toJSONString());
+
+            }
+            // out.flush();
+            columns.add(rows);
+        }
+        return JSONValue.toJSONString(columns);
     }
 }
